@@ -32,14 +32,7 @@ Response = namedtuple("Response", ("data", "status_code", "headers", "url"))
 
 class Iterable:
     """
-    This is a python wrapper for the Iterable API
-
-    We are using the Requests HTTP python library, which I
-    have found very flexible to accomodate the various methods
-    that customers leverage to interact with our API.  Their
-    documentation is also excellent, enabling our team to
-    quickly update this wrapper to support specific reqeusts.
-
+    Main interface for interacting with the Iterable API.
     """
 
     base_uri = "https://api.iterable.com"
@@ -48,8 +41,7 @@ class Iterable:
         """
         This preforms the necessary initialization parameters for the
         Iterable project. It stores the base URI, the API key for the
-        project, and headers tha are consistent across all requests.
-
+        project, and headers that are consistent across all requests.
         """
         self._session = Session()
         if api_key:
