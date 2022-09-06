@@ -60,11 +60,10 @@ If you're interested in extending this library, please follow these guidelines:
 
 ### Installation for development
 
-This project uses Pipenv for now, so follow your preferred procedure for that.
+This project uses poetry for now, so follow your preferred procedure for that.
 
 ```
-pipenv install
-pipenv install -e .
+poetry install
 ```
 
 ### Testing
@@ -72,5 +71,5 @@ pipenv install -e .
 The library uses pytest - you can run the tests by invoking the following:
 
 ```py
-pytest
+poetry run pytest
 ```
