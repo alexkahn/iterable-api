@@ -1,9 +1,19 @@
 [tool.poetry]
 name = "iterable"
 version = "0.1.1"
-description = ""
+description = "Iterable API wrapper"
 authors = ["Alex Kahn <alexkahn@users.noreply.github.com>"]
 license = "GPL-3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent"
+]
+homepage = "https://github.com/alexkahn/iterable-api"
+repository = "https://github.com/alexkahn/iterable-api"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/alexkahn/iterable-api/issues"
 
 [tool.poetry.dependencies]
 python = "^3.6"
