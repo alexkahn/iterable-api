@@ -1,7 +1,8 @@
 [tool.poetry]
-name = "iterable"
+name = "iterable-api"
 version = "0.1.2"
 description = "Iterable API wrapper"
+readme = "README.md"
 authors = ["Alex Kahn <alexkahn@users.noreply.github.com>"]
 license = "GPL-3.0"
 classifiers = [
@@ -11,6 +12,9 @@ classifiers = [
 ]
 homepage = "https://github.com/alexkahn/iterable-api"
 repository = "https://github.com/alexkahn/iterable-api"
+packages = [
+    {include = "iterable", from = "src"}
+]
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/alexkahn/iterable-api/issues"
