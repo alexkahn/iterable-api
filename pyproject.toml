@@ -6,6 +6,23 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
+name = "iterable-api"
+version = "0.1.1"
+authors = [
+    {name="Alex Kahn", email="alex.kahn@outlook.com"}
+]
+description = "Iterable API wrapper"
+readme = "README.md"
 dependencies = [
     "requests"
 ]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent"
+]
+requires-python = ">=3.6"
+
+[project.urls]
+"Homepage" = "https://github.com/alexkahn/iterable-api"
+"Bug Tracker" = "https://github.com/alexkahn/iterable-api/issues"
