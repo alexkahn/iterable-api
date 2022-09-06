@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "iterable"
-version = "0.1.1"
+version = "0.1.2"
 description = "Iterable API wrapper"
 authors = ["Alex Kahn <alexkahn@users.noreply.github.com>"]
 license = "GPL-3.0"
