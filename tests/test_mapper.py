@@ -1,4 +1,4 @@
-from lib.iterable.resources.utils import Mapper
+from iterable.resources.utils import Mapper
 
 
 def test_mapper_initialization():

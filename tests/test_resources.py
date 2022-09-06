@@ -5,8 +5,8 @@ from unittest.mock import Mock, MagicMock
 
 import pytest
 
-from lib.iterable.client import Response
-from lib.iterable.resources import Channels, Campaigns
+from iterable.client import Response
+from iterable.resources import Channels, Campaigns
 
 
 @pytest.fixture

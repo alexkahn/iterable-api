@@ -2,7 +2,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from lib.iterable import Iterable
+from iterable import Iterable
 
 
 def test_client_initializes():
@@ -39,7 +39,7 @@ def test_client_resources():
 
 
 def test_safe_api_calls():
-    with patch('lib.iterable.client.Session') as mock_session:
+    with patch('iterable.client.Session') as mock_session:
         session = mock_session()
         api = Iterable('test_key')
         api.get('/route', headers={'foo': 42})
