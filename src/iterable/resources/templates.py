@@ -49,7 +49,7 @@ class Email(Resource):
         "from_name": "fromName",
         "google_analytics_campaign_name": "googleAnalyticsCampaignName",
         "html": "html",
-        "link_parameters": "linkParameters",
+        "link_parameters": "linkParams",
         "locale": "locale",
         "merge_data_feed_context": "mergeDataFeedContext",
         "message_type_id": "messageTypeId",
