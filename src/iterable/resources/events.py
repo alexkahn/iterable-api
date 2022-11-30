@@ -29,6 +29,7 @@ class Events(Resource):
         user_id=None,
         campaign_id=None,
         template_id=None,
+        event_id=None,
     ):
         resource = "/api/events/track"
         payload = {}
@@ -39,6 +40,7 @@ class Events(Resource):
         payload["userId"] = user_id
         payload["campaignId"] = campaign_id
         payload["templateId"] = template_id
+        payload["id"] = event_id
         return self.client.post(resource, data=payload)
 
     def track_in_app_click(
