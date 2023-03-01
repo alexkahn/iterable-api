@@ -128,11 +128,12 @@ class Users(Resource):
         payload["mergeNestedObjects"] = merge_nested_objects
         return self.client.post(resource, data=payload)
 
-    def update_email(self, current_email, new_email):
+    def update_email(self, current_email, new_email, merge=False):
         resource = "/api/users/updateEmail"
         payload = {}
         payload["currentEmail"] = str(current_email)
         payload["newEmail"] = str(new_email)
+        payload["merge"] = bool(merge)
         return self.client.post(resource, data=payload)
 
     def bulk_update(self, users):
