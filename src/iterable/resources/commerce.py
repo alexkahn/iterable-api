@@ -21,7 +21,7 @@ class Commerce(Resource):
         payload["campaignId"] = campaign_id
         payload["templateId"] = template_id
         payload["createdAt"] = created_at
-        payload["data_fields"] = data_fields
+        payload["dataFields"] = data_fields
         return self.client.post(resource, data=payload)
 
     def update_cart(self, user=None, items=None):
