@@ -28,16 +28,14 @@ from .resources import *
 
 
 Response = namedtuple("Response", ("data", "status_code", "headers", "url"))
-
+DEFAULT_BASE_URI = "https://api.iterable.com"
 
 class Iterable:
     """
     Main interface for interacting with the Iterable API.
     """
 
-    base_uri = "https://api.iterable.com"
-
-    def __init__(self, api_key=None):
+    def __init__(self, api_key: str = None, base_uri: str = DEFAULT_BASE_URI):
         """
         This preforms the necessary initialization parameters for the
         Iterable project. It stores the base URI, the API key for the
@@ -53,6 +51,8 @@ class Iterable:
                 raise ValueError(
                     "No value passed for API Key, please do that or set the ITERABLE_API_KEY environment variable"
                 )
+
+        self.base_uri = base_uri
 
         self._session.headers.update(
             {"Content-type": "application/json", "Api-Key": self.api_key}
