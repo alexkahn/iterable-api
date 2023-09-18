@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "iterable-api"
-version = "0.1.5"
+version = "0.2.0"
 description = "Iterable API wrapper"
 readme = "README.md"
 authors = ["Alex Kahn <alexkahn@users.noreply.github.com>"]
