@@ -17,7 +17,7 @@ Exporting data is also supported, currently to a local file but the method could
 refactored to accept any file-like object (like a socket or a buffer)
 """
 import os
-from json import JSONDecodeError
+from requests.exceptions import JSONDecodeError
 import time
 from collections import namedtuple
 
