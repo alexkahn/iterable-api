@@ -20,6 +20,18 @@ class Campaigns(Resource):
         resource = "/api/campaigns"
         return self.client.get(resource)
 
+    def abort(self, campaign_id: int):
+        """
+        Aborts a campaign
+        :param campaign_id: The ID of the campaign to abort
+        :return: The response from the API
+        """
+        resource = "/api/campaigns/abort"
+        assert campaign_id is not None, "Missing campaign ID to abort"
+        assert isinstance(campaign_id, int), "Campaign ID must be an int"
+        payload = {"campaignId": campaign_id}
+        return self.client.post(resource, data=payload)
+
     def create(self, **kwargs):
         """
         name=None,
