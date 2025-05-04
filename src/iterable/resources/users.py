@@ -122,17 +122,20 @@ class Users(Resource):
 
         resource = "/api/users/update"
         payload = {}
-        payload["email"] = str(email)
+        if email is not None:
+            payload["email"] = str(email)
         payload["dataFields"] = data_fields
-        payload["userId"] = str(user_id)
+        if user_id is not None:
+            payload["userId"] = str(user_id)
         payload["mergeNestedObjects"] = merge_nested_objects
         return self.client.post(resource, data=payload)
 
-    def update_email(self, current_email, new_email):
+    def update_email(self, current_email, new_email, merge=False):
         resource = "/api/users/updateEmail"
         payload = {}
         payload["currentEmail"] = str(current_email)
         payload["newEmail"] = str(new_email)
+        payload["merge"] = bool(merge)
         return self.client.post(resource, data=payload)
 
     def bulk_update(self, users):
