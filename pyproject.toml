@@ -1,6 +1,6 @@
 [project]
 name = "iterable-api"
-version = "0.2.0"
+version = "0.3.0"
 description = "Iterable API wrapper"
 readme = "README.md"
 authors = [{ name = "Alex Kahn", email="<alexkahn@users.noreply.github.com>"}]
