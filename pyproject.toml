@@ -1,9 +1,9 @@
-[tool.poetry]
+[project]
 name = "iterable-api"
 version = "0.2.0"
 description = "Iterable API wrapper"
 readme = "README.md"
-authors = ["Alex Kahn <alexkahn@users.noreply.github.com>"]
+authors = [{ name = "Alex Kahn", email="<alexkahn@users.noreply.github.com>"}]
 license = "GPL-3.0"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -15,15 +15,16 @@ repository = "https://github.com/alexkahn/iterable-api"
 packages = [
     {include = "iterable", from = "src"}
 ]
+dependencies = [
+  "requests>=2.26.0"
+]
+requires-python = ">=3.6"
 
-[tool.poetry.urls]
+[project.urls]
 "Bug Tracker" = "https://github.com/alexkahn/iterable-api/issues"
 
-[tool.poetry.dependencies]
-python = "^3.6"
-requests = "^2.26.0"
 
-[tool.poetry.dev-dependencies]
+[poetry.group.dev.dependencies]
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 
