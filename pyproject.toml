@@ -12,9 +12,6 @@ classifiers = [
 ]
 homepage = "https://github.com/alexkahn/iterable-api"
 repository = "https://github.com/alexkahn/iterable-api"
-packages = [
-    {include = "iterable", from = "src"}
-]
 dependencies = [
   "requests>=2.26.0"
 ]
@@ -24,7 +21,13 @@ requires-python = ">=3.6"
 "Bug Tracker" = "https://github.com/alexkahn/iterable-api/issues"
 
 
-[poetry.group.dev.dependencies]
+[tool.poetry]
+packages = [
+    {include = "iterable", from = "src"}
+]
+
+
+[tool.poetry.group.dev.dependencies]
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 
